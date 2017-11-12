@@ -1,5 +1,6 @@
 (ns clojure-website.page
     (:require [clojure-website.cv :as cv :refer [education]]
+              [clojure-website.footer-parts :as footer-part]
               [clojure-website.translate :as i18n]))
 
 (defn header []
@@ -22,21 +23,8 @@
                     [:p (i18n/translate :en :quote/text)],
                     [:footer (i18n/translate :en :quote/author)]]]],
             [:hr],
-            [:div {:class "row hidden-xs"}
-                [:div {:class "col-md-6 col-sm-6"}
-                    [:p {:class "text-muted text-left"} (i18n/translate :en :footer/updated-at "12.11.2017")]],
-                [:div {:class "col-md-6 col-sm-6"}
-                    [:p.text-right
-                        [:em
-                            [:a.text-muted {:href "https://www.linkedin.com/in/alekssgu"} (i18n/translate :en :footer/leave-message)]]]]],
-            [:div {:class "row text-center visible-xs"}
-                [:div.col-md-12
-                    [:p.text-muted (i18n/translate :en :footer/updated-at "12.11.2017")]]],
-            [:div {:class "row text-center visible-xs"}
-                [:div.col-md-12
-                    [:p
-                        [:em
-                            [:a.text-muted {:href "https://www.linkedin.com/in/alekssgu"} (i18n/translate :en :footer/leave-message) ]]]]] ])
+            (footer-part/footer-md),
+            (footer-part/footer-xs)])
 
   (defn content []
     [:div.row
