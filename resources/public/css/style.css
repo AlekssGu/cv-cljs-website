@@ -1,0 +1,18 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+p.narrow-top {
+    margin-top: -0.75em;
+}
+
+.lead-div-top {
+  margin-top: 5em;
+}
+
+.lead-div-bottom {
+  margin-bottom: 3em;
+}
+
+.lead-div {
+  margin-top: 5em;
+  margin-bottom: 3em;
+}
