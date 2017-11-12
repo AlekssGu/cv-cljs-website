@@ -1,17 +1,12 @@
 (ns clojure-website.core
     (:require [reagent.core :as reagent :refer [atom]]
-              [clojure-website.page :as page]
-              [tongue.core :as tongue]
-              [clojure-website.dictionaries :as dictionaries]))
+              [clojure-website.page :as page]))
 
 (enable-console-print!)
 
 ;; define your app data so that it doesn't get over-written on reload
 
 (defonce app-state (atom {:language "en"}))
-
-(def translate ;; [locale key & args] => string
-  (tongue/build-translate dictionaries/dictionaries))
 
 (defn main-page []
   [:div.container-fluid

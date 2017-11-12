@@ -1,45 +1,45 @@
 (ns clojure-website.cv
-    (:require [clojure-website.core :as core]))
+    (:require [clojure-website.translate :as i18n]))
 
 (defn education []
     [:dl.dl-horizontal
-        [:dt (core/translate :en :education/university-of-latvia)],
+        [:dt (i18n/translate :en :education/university-of-latvia)],
         [:dd
-            [:p (core/translate :en :education/msc-title)],
-            [:p.narrow-top (core/translate :en :education/msc-date)]],
-        [:dt (core/translate :en :education/university-of-latvia)],
+            [:p (i18n/translate :en :education/msc-title)],
+            [:p.narrow-top (i18n/translate :en :education/msc-date)]],
+        [:dt (i18n/translate :en :education/university-of-latvia)],
         [:dd
-            [:p (core/translate :en :education/bsc-title)],
-            [:p.narrow-top (core/translate :en :education/bsc-date)]],
+            [:p (i18n/translate :en :education/bsc-title)],
+            [:p.narrow-top (i18n/translate :en :education/bsc-date)]],
         [:hr],
-        [:dt (core/translate :en :education/certifications-title)],
+        [:dt (i18n/translate :en :education/certifications-title)],
         [:dd
-            [:p (core/translate :en :education/oracle-ca-title)],
-            [:p.narrow-top (core/translate :en :education/oracle-ca-date)]]])
+            [:p (i18n/translate :en :education/oracle-ca-title)],
+            [:p.narrow-top (i18n/translate :en :education/oracle-ca-date)]]])
 
 (defn work-experience []
     [:dl.dl-horizontal
-        [:dt (core/translate :en :work/autentica-title)],
+        [:dt (i18n/translate :en :work/autentica-title)],
         [:dd
-            [:p (core/translate :en :work/autentica-position)],
-            [:p.narrow-top (core/translate :en :work/autentica-date)],
-            [:p (core/translate :en :work/autentica-responsibilities)]],
-        [:dt (core/translate :en :work/dnb-title)],
+            [:p (i18n/translate :en :work/autentica-position)],
+            [:p.narrow-top (i18n/translate :en :work/autentica-date)],
+            [:p (i18n/translate :en :work/autentica-responsibilities)]],
+        [:dt (i18n/translate :en :work/dnb-title)],
         [:dd
-            [:p (core/translate :en :work/dnb-position)],
-            [:p.narrow-top (core/translate :en :work/dnb-date)],
-            [:p (core/translate :en :work/dnb-responsibilities)]]])
+            [:p (i18n/translate :en :work/dnb-position)],
+            [:p.narrow-top (i18n/translate :en :work/dnb-date)],
+            [:p (i18n/translate :en :work/dnb-responsibilities)]]])
 
 (defn skills []
     [:dl.dl-horizontal
-        [:dt (core/translate :en :skills/job-related-title)],
+        [:dt (i18n/translate :en :skills/job-related-title)],
         [:dd
-            [:p (core/translate :en :skills/primary-skills)],
-            [:p (core/translate :en :skills/experience-in)],
-            [:p.narrow-top (core/translate :en :skills/additional-skills)]],
-    [:dt (core/translate :en :skills/personal-title)],
+            [:p (i18n/translate :en :skills/primary-skills)],
+            [:p (i18n/translate :en :skills/experience-in)],
+            [:p.narrow-top (i18n/translate :en :skills/additional-skills)]],
+    [:dt (i18n/translate :en :skills/personal-title)],
         [:dd
-            [:p (core/translate :en :skills/languages)],
-            [:p (core/translate :en :skills/self-motivated)],
-            [:p.narrow-top (core/translate :en :skills/continuous-learning)],
-            [:p.narrow-top (core/translate :en :skills/friendly)]]])
+            [:p (i18n/translate :en :skills/languages)],
+            [:p (i18n/translate :en :skills/self-motivated)],
+            [:p.narrow-top (i18n/translate :en :skills/continuous-learning)],
+            [:p.narrow-top (i18n/translate :en :skills/friendly)]]])
